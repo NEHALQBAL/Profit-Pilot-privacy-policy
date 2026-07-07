@@ -2,11 +2,359 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="color-scheme" content="light" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>ProfitPilot Privacy Policy</title>
+
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --bg-soft: #eaf2ff;
+      --card: rgba(255, 255, 255, 0.96);
+      --text: #172033;
+      --muted: #5d6882;
+      --line: #dbe4f0;
+      --accent: #2563eb;
+      --accent-2: #1d4ed8;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      --radius-xl: 24px;
+      --radius-md: 14px;
+      --maxw: 980px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, var(--bg-soft), transparent 30%),
+        linear-gradient(180deg, #fafcff 0%, var(--bg) 100%);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: 100%;
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    .hero {
+      padding: 10px 2px 18px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(37, 99, 235, 0.16);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--accent-2);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      margin: 14px 0 10px;
+      font-size: clamp(2rem, 3.4vw, 3.1rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 72ch;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(219, 228, 240, 0.95);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .header {
+      padding: 24px 24px 18px;
+      background:
+        linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(255, 255, 255, 0.96) 52%),
+        linear-gradient(180deg, #ffffff, #fafcff);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .updated {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+
+    .content {
+      padding: 24px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .summary-item {
+      padding: 16px;
+      background: linear-gradient(180deg, #ffffff, #f8fbff);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+    }
+
+    .summary-item strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.96rem;
+      color: #0f172a;
+    }
+
+    .summary-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    h2 {
+      margin: 28px 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.3;
+      color: #0f172a;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 0 0 16px 1.2rem;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: #0f172a;
+    }
+
+    .notice {
+      margin: 18px 0 8px;
+      padding: 14px 16px;
+      border: 1px solid rgba(37, 99, 235, 0.16);
+      border-left: 5px solid var(--accent);
+      background: linear-gradient(180deg, rgba(37, 99, 235, 0.08), rgba(37, 99, 235, 0.04));
+      border-radius: 14px;
+    }
+
+    .notice p {
+      margin: 0;
+      color: #31415f;
+    }
+
+    .contact-box {
+      margin-top: 10px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: #fcfdff;
+    }
+
+    .contact-box a {
+      font-weight: 700;
+    }
+
+    .footer {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .inline-code {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #eef4ff;
+      border: 1px solid #dbe7ff;
+      color: #183b8c;
+      font-size: 0.92rem;
+      font-weight: 700;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 12px 10px 28px;
+      }
+
+      .header,
+      .content {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .summary {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        margin-top: 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p>Hello, this page is working.</p>
+  <main class="page">
+    <section class="hero" aria-label="Privacy Policy introduction">
+      <span class="eyebrow">ProfitPilot Privacy Policy</span>
+      <h1>Privacy Policy</h1>
+      <p>This page explains what information ProfitPilot collects, how it is used, how it is protected, and the choices available to users on mobile and desktop devices.</p>
+    </section>
+
+    <article class="card">
+      <header class="header">
+        <p class="updated">Last Updated: July 7, 2026</p>
+      </header>
+
+      <div class="content">
+        <div class="summary" aria-label="Privacy Policy summary">
+          <div class="summary-item">
+            <strong>Data minimization</strong>
+            <span>Only the information needed to run the app and process uploaded business files is used.</span>
+          </div>
+          <div class="summary-item">
+            <strong>Local-first design</strong>
+            <span>Local SQLite is used for app-side storage and frontend data handling where applicable.</span>
+          </div>
+          <div class="summary-item">
+            <strong>Clear disclosures</strong>
+            <span>Upload, processing, and support practices are described in plain language for users.</span>
+          </div>
+        </div>
+
+        <h2>1. Introduction</h2>
+        <p>We value your privacy and are committed to handling your business data responsibly. ProfitPilot is designed to work primarily with local device storage and to minimize the collection of personal information.</p>
+        <p>This Privacy Policy applies to the ProfitPilot mobile application, desktop application, related client-side tools, any backend services used for temporary file processing, and any website or documentation that links to this policy.</p>
+
+        <h2>2. Information We Collect</h2>
+        <ul>
+          <li><strong>Files you upload or import:</strong> payout, inventory, sales, CSV, Excel, or other business files used for analysis.</li>
+          <li><strong>App usage data:</strong> basic technical information such as crashes, performance data, and feature usage, if diagnostics are enabled.</li>
+          <li><strong>Device information:</strong> general device and operating system details needed to keep the app working properly.</li>
+          <li><strong>Optional support information:</strong> details you send to us when contacting support, such as your email address and message.</li>
+        </ul>
+        <p>We do not collect more data than is needed for app functionality and support.</p>
+
+        <h2>3. How We Use Information</h2>
+        <ul>
+          <li>processing business files and generating profit and loss calculations,</li>
+          <li>showing charts, reports, and insights inside the app,</li>
+          <li>saving user preferences and app settings,</li>
+          <li>fixing bugs, improving performance, and maintaining app stability,</li>
+          <li>responding to support requests,</li>
+          <li>meeting legal or security requirements when necessary.</li>
+        </ul>
+
+        <h2>4. Local Storage, SQLite, and File Processing</h2>
+        <p>ProfitPilot is built to work mainly on your device. In many cases, files are processed locally and are not permanently stored on our servers.</p>
+        <p>The app may use local SQLite storage to save app data, settings, cached values, and selected business information needed for the user experience.</p>
+        <p>When backend processing is required, the app may upload the selected Excel file over encrypted HTTPS so the server can complete calculations or generate processed output. Before backend upload, the frontend may remove or blank specific columns that are not needed for server-side processing, including <span class="inline-code">Statement Number</span> and <span class="inline-code">Seller Short Code</span>.</p>
+
+        <h2>5. Data Sharing</h2>
+        <p>We do not sell your personal information or business files.</p>
+        <p>We may share limited information only in these situations: with service providers that help us operate the app, to comply with applicable laws, to protect the rights, safety, or security of users and the app, or during a business transfer such as a merger or acquisition, if applicable.</p>
+
+        <h2>6. Third-Party Services</h2>
+        <p>If ProfitPilot uses third-party services such as analytics, crash reporting, cloud storage, or payment processing, those services may process limited data according to their own privacy policies. You should review the privacy policies of any third-party services used by the app.</p>
+
+        <h2>7. Permissions</h2>
+        <p>ProfitPilot may request access only to permissions needed for its features. For example, file access may be required to import and analyze your business documents. Any permission you grant is used only for the feature you selected.</p>
+
+        <h2>8. Data Retention</h2>
+        <p>We keep information only as long as needed to provide the app, support its features, or meet legal obligations.</p>
+        <p>Files stored locally on your device can be removed by deleting the file or clearing app data, depending on how the app works.</p>
+        <p>Any temporary server-side processing is intended to be short-lived and limited to the task requested by the user.</p>
+
+        <h2>9. Security</h2>
+        <p>We use reasonable technical and organizational measures to protect information against unauthorized access, misuse, loss, or disclosure. No method of transmission or storage is completely secure, so we cannot guarantee absolute security.</p>
+        <p>Where backend transfer is required, ProfitPilot uses HTTPS to help protect data in transit.</p>
+
+        <h2>10. Your Choices and Rights</h2>
+        <ul>
+          <li>access the information you provided,</li>
+          <li>request correction or deletion where applicable,</li>
+          <li>withdraw permission for certain device access,</li>
+          <li>stop using the app and remove locally stored files from your device.</li>
+        </ul>
+
+        <h2>11. Children’s Privacy</h2>
+        <p>ProfitPilot is not intended for children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us information, please contact us and we will take appropriate steps.</p>
+
+        <h2>12. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with a new “Last Updated” date.</p>
+
+        <div class="notice">
+          <p>For Google Play review, make sure the Privacy Policy, in-app disclosures, and Data Safety form all match the app’s actual data handling.</p>
+        </div>
+
+        <h2>13. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, contact us at:</p>
+        <div class="contact-box">
+          <p><strong>Email:</strong> <a href="mailto:nidev2131@gmail.com">nidev2131@gmail.com</a></p>
+        </div>
+
+        <div class="footer">
+          <p>This Privacy Policy is provided for the ProfitPilot application and related services.</p>
+        </div>
+      </div>
+    </article>
+  </main>
 </body>
 </html>
